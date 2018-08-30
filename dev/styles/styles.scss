@@ -1,0 +1,100 @@
+@import "setup";
+
+//██████████ LAYOUT ██████████
+body {
+    background: #87ff87;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+.wrapper {
+  width: 75%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+main {
+  width: 100%;
+}
+//██████████ MAIN ██████████
+.case {
+  border-bottom-left-radius: 75px;
+  border-bottom-right-radius: 75px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background: #ffff00;
+  box-shadow: 0px 20px #ffd900;
+  .buttons {
+    margin: 0 auto;
+    width: fit-content;
+    margin-bottom: 20px;
+    .button {
+      width: 40px;
+      height: 40px;
+      background: #1acaff;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      display: inline-block;
+      margin: 0 10px;
+      box-shadow: inset 0px -5px #0096c4;
+    }
+  }
+}
+.screen {
+  background: #ffc0cb;
+  height: 200px;
+  width: calc(100% - 40px);
+  margin: 30px 20px 20px 20px;
+  border-radius: 10px;
+  font-family: 'VT323', monospace;
+  color: #df2e4b;
+  position: relative;
+  &::before {
+    content: "";
+    background: #ffb3bf;
+    height: 40%;
+    width: 100%;
+    display: block; 
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .stats {
+    background: #ff8b9e;
+    height: 25px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: inset 0px 5px #ff7b91;
+    padding: 5px 20px 0 20px;
+    position: relative;
+    p {
+      display: inline-block;
+    }
+    .statHealth {
+      position: absolute;
+      top: 5px;
+      left: 20px;
+    }
+    .statName {
+      text-align: center;
+      width: 100%;
+    }
+    .statHappiness {
+      position: absolute;
+      right: 20px;
+      top: 5px;
+    }
+  }
+  .pet {
+    font-size: 70px;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+}
