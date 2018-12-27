@@ -130,9 +130,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  margin: 0;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out; }
+  margin: 0; }
 
 img {
   max-width: 100%;
@@ -167,26 +165,41 @@ main {
   border-top-right-radius: 40px;
   background: #ffff00;
   -webkit-box-shadow: 0px 20px #ffd900;
-          box-shadow: 0px 20px #ffd900; }
-  .case .buttons {
-    margin: 0 auto;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin-bottom: 20px; }
-    .case .buttons .button {
-      width: 40px;
-      height: 40px;
-      background: #1acaff;
-      border-radius: 50%;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      -ms-border-radius: 50%;
-      -o-border-radius: 50%;
-      display: inline-block;
-      margin: 0 10px;
-      -webkit-box-shadow: inset 0px -5px #0096c4;
-              box-shadow: inset 0px -5px #0096c4; }
+          box-shadow: 0px 20px #ffd900;
+  position: relative; }
+
+.buttons {
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 20px; }
+  .buttons .button {
+    display: inline-block;
+    height: 40px; }
+  .buttons .button1:hover ~ .stat1 {
+    background: red; }
+
+.button {
+  width: 40px;
+  background: #1acaff;
+  -webkit-box-shadow: inset 0px -5px #0096c4;
+          box-shadow: inset 0px -5px #0096c4;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer; }
+
+.buttonOptions {
+  height: 25px;
+  position: absolute;
+  top: -5px;
+  left: 10px; }
+  .buttonOptions:hover {
+    background: red; }
 
 .screen {
   background: #ffc0cb;
@@ -208,29 +221,35 @@ main {
     z-index: 1;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px; }
-  .screen .stats {
+  .screen .menuBar {
     background: #ff8b9e;
     height: 25px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    -webkit-box-shadow: inset 0px 5px #ff7b91;
-            box-shadow: inset 0px 5px #ff7b91;
     padding: 5px 20px 0 20px;
     position: relative; }
-    .screen .stats p {
-      display: inline-block; }
-    .screen .stats .statHealth {
+    .screen .menuBar p, .screen .menuBar label {
+      display: block; }
+    .screen .menuBar .label1 {
       position: absolute;
       top: 5px;
       left: 20px; }
-    .screen .stats .statName {
+    .screen .menuBar .label2 {
       text-align: center;
       width: 100%; }
-    .screen .stats .statHappiness {
+    .screen .menuBar .label3 {
       position: absolute;
       right: 20px;
       top: 5px; }
-  .screen .pet {
+  .screen .statsMenu {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    -webkit-box-shadow: inset 0px 5px #ff7b91;
+            box-shadow: inset 0px 5px #ff7b91; }
+  .screen .buttonMenu {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    bottom: -150px;
+    z-index: 20; }
+  .screen .petView {
     font-size: 70px;
     position: absolute;
     left: 50%;

@@ -2,10 +2,10 @@
 
 //██████████ LAYOUT ██████████
 body {
-    background: #87ff87;
-    display: flex;
-    align-items: center;
-    min-height: 100vh;
+  background: #87ff87;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
 }
 .wrapper {
   width: 75%;
@@ -15,7 +15,7 @@ body {
 main {
   width: 100%;
 }
-//██████████ MAIN ██████████
+//██████████ CASE ██████████
 .case {
   border-bottom-left-radius: 75px;
   border-bottom-right-radius: 75px;
@@ -23,23 +23,41 @@ main {
   border-top-right-radius: 40px;
   background: #ffff00;
   box-shadow: 0px 20px #ffd900;
-  .buttons {
-    margin: 0 auto;
-    width: fit-content;
-    margin-bottom: 20px;
-    .button {
-      width: 40px;
-      height: 40px;
-      background: #1acaff;
-      border-radius: 50%;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      -ms-border-radius: 50%;
-      -o-border-radius: 50%;
-      display: inline-block;
-      margin: 0 10px;
-      box-shadow: inset 0px -5px #0096c4;
+  position: relative;
+}
+.buttons {
+  margin: 0 auto;
+  width: fit-content;
+  margin-bottom: 20px;
+  .button {
+    display: inline-block;
+    height: 40px;
+  }
+  .button1 {
+    &:hover ~ .stat1{
+      background: red;
     }
+  }
+}
+.button {
+  width: 40px;
+  background: #1acaff;
+  box-shadow: inset 0px -5px #0096c4;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.buttonOptions {
+  height: 25px;
+  position: absolute;
+  top: -5px;
+  left: 10px;
+  &:hover {
+    background: red;
   }
 }
 .screen {
@@ -63,33 +81,43 @@ main {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
   }
-  .stats {
+  .menuBar {
     background: #ff8b9e;
     height: 25px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    box-shadow: inset 0px 5px #ff7b91;
     padding: 5px 20px 0 20px;
     position: relative;
-    p {
-      display: inline-block;
+    p, label {
+      // display: inline-block;
+      display: block;
     }
-    .statHealth {
+    .label1 {
       position: absolute;
       top: 5px;
       left: 20px;
     }
-    .statName {
+    .label2 {
       text-align: center;
       width: 100%;
     }
-    .statHappiness {
+    .label3 {
       position: absolute;
       right: 20px;
       top: 5px;
     }
   }
-  .pet {
+  .statsMenu {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: inset 0px 5px #ff7b91;
+  }
+  .buttonMenu {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    bottom: -150px;
+    z-index: 20;
+  }
+  //██████████ PET VIEW ██████████
+  .petView {
     font-size: 70px;
     position: absolute;
     left: 50%;
